@@ -13,11 +13,69 @@ body{
     font-family: 'Epilogue', 'sans-serif';
 }
 
+.container{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1200px;
+}
+
+.nav{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .nav__hamburger{
     width: 30px;
-    height: 50px;
+    height: 50%;
     background-image: url("../images/icon-menu.svg");
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+
+    z-index: 100;
+    transition: background-image .3s;
+}
+
+.nav__hamburger--open{
+    background-image: url("../images/icon-close-menu.svg");
+}
+
+.nav__overlay{
+    background-color: #000000a7;
+    position: fixed;
+    inset: 0;
+}
+
+.nav__menu{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #fff;
+    width: 65%;
+    max-width: 400px;
+    padding: 0;
+    list-style: none;
+    overflow: auto;
+    padding: 70px 0;
+}
+
+.nav__item{
+    width: 80%;
+    margin: 0 auto;
+    color: var(--almost-black);
+    cursor: pointer;
+    padding: 20px 0;
+}
+
+.nav__parent{
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 1.3em;
+    padding: 20px 0;
 }
