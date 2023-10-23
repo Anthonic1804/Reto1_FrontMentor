@@ -80,7 +80,7 @@ body{
     padding: 20px 0;
 }
 
-.nav__item > span{
+.nav__item:has(.nav__parent){
     padding: 0;
 }
 
