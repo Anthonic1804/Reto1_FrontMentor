@@ -80,9 +80,10 @@ body{
     padding: 20px 0;
 }
 
-.nav__item:has(.nav__parent){
+.nav__item > .nav__parent{
     padding: 0;
 }
+
 
 .nav__inner{
     list-style: none;
